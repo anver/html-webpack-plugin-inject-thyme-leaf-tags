@@ -1,7 +1,8 @@
 {
   "name": "html-webpack-plugin-inject-thyme-leaf-tags",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "author": "Anver Sadutt <anvergdr@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -12,6 +13,7 @@
     "html-webpack-plugin": "^5.0.0",
     "webpack": "^5.0.0"
   },
+  "peerDependencies": {},
   "keywords": [
     "html-webpack-plugin",
     "webpack",

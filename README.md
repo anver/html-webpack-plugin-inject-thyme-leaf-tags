@@ -8,7 +8,7 @@ import WebpackPluginInjectThymeTags from 'html-webpack-plugin-inject-thyme-leaf-
 
 under webpack config plugin section add
 
-
+```js
 plugins: [
 	new HtmlWebpackPlugin({
 		template: path.join(__dirname, "src", "index.html"),
@@ -19,7 +19,7 @@ plugins: [
 		scriptPrefix: "/static/",
 	}),
 ]
-
+```
 you can an empty object for no prefix like this
 
 

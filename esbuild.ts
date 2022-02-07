@@ -1,9 +1,11 @@
-import esbuild from "esbuild";
+const esbuild = require("esbuild");
 
 const defaultConfig = {
   minify: true,
   bundle: true,
   entryPoints: ["src/index.ts"],
+  platform: "node",
+  external: ["./node_modules/*"],
 };
 
 esbuild.build({
