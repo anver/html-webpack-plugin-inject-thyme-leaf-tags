@@ -1,0 +1,19 @@
+{
+  "name": "html-webpack-plugin-inject-thyme-leaf-tags",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "Anver Sadutt <anvergdr@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "html-webpack-plugin": "^5.0.0"
+  },
+  "keywords": [
+    "html-webpack-plugin",
+    "webpack",
+    "thymeleaf",
+    "inject",
+    "leaf",
+    "tags"
+  ]
+}
