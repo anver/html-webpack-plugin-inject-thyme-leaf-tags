@@ -23,5 +23,9 @@
     "inject",
     "leaf",
     "tags"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anver/html-webpack-plugin-inject-thyme-leaf-tags"
+  }
 }
