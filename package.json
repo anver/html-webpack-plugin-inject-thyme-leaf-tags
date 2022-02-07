@@ -4,9 +4,13 @@
   "main": "src/index.ts",
   "author": "Anver Sadutt <anvergdr@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "node esbuild.ts"
+  },
   "devDependencies": {
-    "webpack": "^5.0.0",
-    "html-webpack-plugin": "^5.0.0"
+    "esbuild": "^0.14.20",
+    "html-webpack-plugin": "^5.0.0",
+    "webpack": "^5.0.0"
   },
   "keywords": [
     "html-webpack-plugin",
