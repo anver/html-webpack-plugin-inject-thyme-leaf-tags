@@ -1,24 +1,33 @@
-"use strict";
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+type TOptions = { scriptPrefix: string; stylePrefix: string };
 
-function HtmlWebpackPluginInjectThymeLeafTags(options = {}) {
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+type HtmlWebpackPluginInjectThymeLeafTags = {
+  options: TOptions;
+};
+
+function HtmlWebpackPluginInjectThymeLeafTags(
+  this: any,
+  options: TOptions | {} = {}
+) {
   this.options = options;
   this.PluginName = "HtmlWebpackPluginInjectThymeLeafTags";
 }
 
-HtmlWebpackPluginInjectThymeLeafTags.prototype.apply = function (compiler) {
-  compiler.hooks.thisCompilation.tap(this.PluginName, compilation => {
+HtmlWebpackPluginInjectThymeLeafTags.prototype.apply = function (
+  compiler: any
+) {
+  compiler.hooks.thisCompilation.tap(this.PluginName, (compilation: any) => {
     var self = this;
     HtmlWebpackPlugin.getHooks(compilation).afterTemplateExecution.tapAsync(
       this.PluginName,
-      (data, cb) => {
+      <T extends { headTags: any; bodyTags: any }>(data: T, cb: any) => {
         const { headTags, bodyTags } = data;
 
-        headTags.forEach(function (tag) {
+        headTags.forEach(function (tag: any) {
           self.injectTags(tag);
         });
 
-        bodyTags.forEach(function (tag) {
+        bodyTags.forEach(function (tag: any) {
           self.injectTags(tag);
         });
 
@@ -28,7 +37,9 @@ HtmlWebpackPluginInjectThymeLeafTags.prototype.apply = function (compiler) {
   });
 };
 
-HtmlWebpackPluginInjectThymeLeafTags.prototype.injectTags = function (tag) {
+HtmlWebpackPluginInjectThymeLeafTags.prototype.injectTags = function (
+  tag: any
+) {
   if (tag.attributes.src)
     tag.attributes[
       "th:src"
