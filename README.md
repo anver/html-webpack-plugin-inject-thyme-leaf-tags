@@ -3,8 +3,17 @@
 A html webpack plugin to inject thymeleaf compatible template tags for script and style tags
 
 
-// Usage example
+## Installation
+
+```js
+	yarn add -D html-webpack-plugin-inject-thyme-leaf-tags
+```
+
+## Usage example
+```js
+
 import WebpackPluginInjectThymeTags from 'html-webpack-plugin-inject-thyme-leaf-tags';
+```
 
 under webpack config plugin section add
 
