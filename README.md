@@ -1,4 +1,4 @@
-#ThymeLeaf Tag Injector
+## ThymeLeaf Tag Injector
 
 A html webpack plugin to inject thymeleaf compatible template tags for script and style tags
 
@@ -6,11 +6,16 @@ A html webpack plugin to inject thymeleaf compatible template tags for script an
 ## Installation
 
 ```js
-	npm install -D html-webpack-plugin-inject-thyme-leaf-tags
 	yarn add -D html-webpack-plugin-inject-thyme-leaf-tags
+```
+# or
+
+```js
+	npm install -D html-webpack-plugin-inject-thyme-leaf-tags
 ```
 
 ## Usage example
+
 ```js
 
 import WebpackPluginInjectThymeTags from 'html-webpack-plugin-inject-thyme-leaf-tags';
@@ -33,12 +38,13 @@ plugins: [
 ]
 
 ```
-you can an empty object for no prefix like this
+
+you can pass an empty object if no prefix is needed like this
 
 
 ```ts
 
-new HtmlWebpackPluginInjectTags({}),
+new HtmlWebpackPluginInjectTags({})
 
 ```
 
