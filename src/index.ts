@@ -1,9 +1,6 @@
 type TOptions = { scriptPrefix: string; stylePrefix: string };
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-type HtmlWebpackPluginInjectThymeLeafTags = {
-  options: TOptions;
-};
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 function HtmlWebpackPluginInjectThymeLeafTags(
   this: any,
