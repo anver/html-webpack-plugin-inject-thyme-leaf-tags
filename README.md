@@ -6,9 +6,8 @@ A html webpack plugin to inject thymeleaf compatible template tags for script an
 ## Installation
 
 ```js
-
+	npm install -D html-webpack-plugin-inject-thyme-leaf-tags
 	yarn add -D html-webpack-plugin-inject-thyme-leaf-tags
-	
 ```
 
 ## Usage example
@@ -27,7 +26,7 @@ plugins: [
 		template: path.join(__dirname, "src", "index.html"),
 	}),
 
-	new HtmlWebpackPluginGvoInjectTags({
+	new HtmlWebpackPluginInjectTags({
 		stylePrefix: "/static/",
 		scriptPrefix: "/static/",
 	}),
@@ -39,7 +38,7 @@ you can an empty object for no prefix like this
 
 ```ts
 
-new HtmlWebpackPluginGvoInjectTags({}),
+new HtmlWebpackPluginInjectTags({}),
 
 ```
 
@@ -47,6 +46,6 @@ or like this
 
 ```ts 
 
-new HtmlWebpackPluginGvoInjectTags(),
+new HtmlWebpackPluginInjectTags(),
 
 ```
